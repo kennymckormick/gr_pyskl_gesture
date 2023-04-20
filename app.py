@@ -173,7 +173,7 @@ def pyskl_gesture(video):
             success, image = cap.read()
 
     output_file = "test.mp4"
-    out = cv2.VideoWriter(output_file, cv2.VideoWriter_fourcc(*'avc1'), 24, (width, height))
+    out = cv2.VideoWriter(output_file, cv2.VideoWriter_fourcc(*'mp4v'), 24, (width, height))
     for image in images:
         out.write(image)
     out.release()
