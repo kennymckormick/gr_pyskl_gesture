@@ -181,6 +181,13 @@ def pyskl_gesture(video):
 
 demo = gr.Interface(
     fn=pyskl_gesture,
+    title="PYSKL Gesture Recognition",
+    description=(
+        "Can recognize 15 different gestures: Call, Dislike, Fist, Four, "
+        "Like, Mute, OK, One, Palm, Peace, "
+        "Rock, Stop, Three [Middle 3 Fingers], Three [Left 3 Fingers], Two Up. "
+        "The gestures are originally defined in HaGRID. "
+    )
     inputs=gr.Video(source="webcam", format="mp4"),
     outputs=gr.Video()
 )
